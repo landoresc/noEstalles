@@ -43,7 +43,7 @@ describe "Juego No Estalles!" do
 
 	it "Selecciono una Celda y Finaliza Juego" do
 		tablero = NoEstalles.new
-		tablero.incrementarDecrementarPuntaje(2,1).should == 0	
+		tablero.incrementarDecrementarPuntaje(2,1).should > 0	
 	end
 
 	it "Genero tablero dinamicamente" do
