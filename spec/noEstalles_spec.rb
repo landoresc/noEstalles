@@ -8,17 +8,25 @@ describe "Juego No Estalles!" do
 		tablero.iniciarPuntos.should == 0
 	end
 	
-	it "Selecciona fila 1, columna 1 y sigue vivo" do
+	it "Selecciona una celda y sigue vivo" do
 		tablero = NoEstalles.new
-		tablero.eligeCelda 1
-		tablero.getPuntos.should == 1
 		tablero.getVidas.should == 1
 	end
 
-	it "Selecciona fila 1, columna 2 y sigue vivo" do
+	it "Verificar si hay Bombas" do
 		tablero = NoEstalles.new
-		tablero.eligeCelda 2
-		tablero.getVidas.should == 1
+		tablero.getBombas.should > 0
 	end
+
+	it "Verificar Existencia espacios en Blanco" do
+		tablero = NoEstalles.new
+		tablero.getEspaciosBlanco.should > 0	
+	end
+
+	it "Verificar Celda con Bomba al contorno" do
+		tablero = NoEstalles.new
+		tablero.getCeldasBombaContorno.should > 0	
+	end
+	
 
 end
