@@ -1,7 +1,8 @@
 class NoEstalles
 
 	def initialize
-		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1],[-1,-1,1]]
+		#@tablero = [[1,1,0],[-1,1,1],[-1,-1,1],[-1,-1,1]]
+		@tablero = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]		
 		@puntajeJugador = 0
 		@vidasJugador = 1
 	end
@@ -35,6 +36,7 @@ class NoEstalles
 	end
 
 	def getTablero
+		setBombasAleatorias
 		@tableroHTML = ""
 		for i in(0..@tablero.length()-1)
 			@tableroHTML+="<tr>"
@@ -47,6 +49,15 @@ class NoEstalles
 		end
 		return @tableroHTML
 	end
+
+	def setBombasAleatorias
+		for i in(0..4)
+			@randomFila = rand(@tablero.length())
+			@randomColumna = rand(@tablero.length())
+			@tablero[@randomFila][@randomColumna] = -1 
+		end		
+	end
+
 
 	def getBombas
 		return 3	
