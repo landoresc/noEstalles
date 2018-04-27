@@ -24,11 +24,11 @@ class NoEstalles
 		return @puntajeJugador
 	end
 
-	def eligeCelda posicion
-		if @tablero[posicion][posicion] >= 0
+	def incrementarDecrementarPuntaje(fila, columna)
+		if @tablero[fila][columna] >= 0
 			@puntajeJugador += 1
 		else
-			@vidasJugador = 0
+			@puntajeJugador = 0
 		end
 
 		return @puntajeJugador
