@@ -19,4 +19,10 @@ Escenario: Validar que existan celdas con valores vacios al iniciar el juego
 	Entonces encuentro una celda con valor vacio
 	
 Escenario: Validar puntos realizados
+	Dado que finalizo el juego
+	Entonces visualizo los puntos alcanzados
+
+Escenario: Reiniciar el juego
+	Dado que finalice el juego y doy clic al enlace Inicio 
+	Entonces visualizo la pantalla de inicio y veo "No Estalles"
 	

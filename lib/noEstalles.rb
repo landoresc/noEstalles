@@ -1,7 +1,7 @@
 class NoEstalles
 
 	def initialize
-		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1],[-1,-1,1]]
+		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1]]
 		@puntajeJugador = 0
 		@vidasJugador = 1
 	end

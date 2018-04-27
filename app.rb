@@ -2,20 +2,14 @@ require 'sinatra'
 require './lib/noEstalles.rb'
 
 get '/' do
-@resultado=""
  erb:index
 end
 
 get '/index' do
-	
+	@resultado=""
 	@partida = NoEstalles.new
 	@tableroHTML = @partida.getTablero
-	
-	@resultado =params["3"]
-	if @resultado.eql?("3")
-		@resultado = "bomba"
-		@bomba = "background: url(../img/bomba.jpg) no-repeat;"
-	end  
+
 	erb:index
 end
 
