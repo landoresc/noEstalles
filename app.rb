@@ -1,19 +1,23 @@
 require 'sinatra'
+require './lib/noEstalles.rb'
 
 get '/' do
-	@mensaje = ""
-	@bomba ="none"
-		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1]]
+@resultado=""
+ erb:index
+=begin 
+@tablero = NoEstalles.new
+	@matriz = @tablero.getTablero
 
 		for i in(0..2)
 			for j in(0..2)
-		 		@mensaje += @tablero[i][j].to_s
+		 		@mensaje += @matriz[i][j].to_s
 			end
 			@mensaje +=">>"
 		end
 		#[1,1,0],[-1,1,1],[-1,-1,1]
 
     erb:index
+=end
 		
 end
 
