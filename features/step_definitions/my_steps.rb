@@ -10,14 +10,10 @@ Cuando(/^doy clic al boton bomba$/) do
   click_button("3")
 end
 
-
-Dado(/^la le doy clic al boton (\d+)$/) do |arg1|
-  click_button(arg1)
-end
-
-Entonces(/^el resultado es bomba$/) do
+Entonces(/^encuentro que existe una bomba$/) do
   last_response.body.should =~ /#{"bomba"}/m
 end
+
 
 
 

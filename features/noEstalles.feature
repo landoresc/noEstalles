@@ -8,5 +8,4 @@ Escenario: Titulo
 
 Escenario: Validar Bomba
 	Dado Que voy a la portada
-	Y la le doy clic al boton 3
-	Entonces el resultado es bomba
+	Entonces encuentro que existe una bomba
