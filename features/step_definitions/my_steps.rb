@@ -11,7 +11,17 @@ Cuando(/^doy clic al boton bomba$/) do
 end
 
 Entonces(/^encuentro que existe una bomba$/) do
-  last_response.body.should =~ /#{"bomba"}/m
+  last_response.body.should =~ /#{"-1"}/m
+end
+
+
+Entonces(/^encuentro una celda con valor numerico$/) do
+  last_response.body.should =~ /#{"btn_PresionadoConValor"}/m
+end
+
+
+Entonces(/^encuentro una celda con valor vacio$/) do
+  last_response.body.should =~ /#{"btn_PresionadoVacio"}/m
 end
 
 
