@@ -6,7 +6,7 @@ describe "Juego No Estalles!" do
 		tablero = NoEstalles.new
 		tablero.iniciarVidas.should == 1
 		tablero.iniciarPuntos.should == 0
-		tablero.getTablero[0][0].should > 0 
+		tablero.getTablero.length.should > 0 
 	end
 
 	
@@ -44,6 +44,11 @@ describe "Juego No Estalles!" do
 	it "Selecciono una Celda y Finaliza Juego" do
 		tablero = NoEstalles.new
 		tablero.incrementarDecrementarPuntaje(2,1).should == 0	
+	end
+
+	it "Genero tablero dinamicamente" do
+		tablero = NoEstalles.new
+		tablero.getCeldaFila(0,0).length.should > 0	
 	end
 
 

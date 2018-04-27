@@ -18,4 +18,5 @@ Escenario: Validar que existan celdas con valores vacios al iniciar el juego
 	Dado Que voy a la portada
 	Entonces encuentro una celda con valor vacio
 	
-
+Escenario: Validar puntos realizados
+	

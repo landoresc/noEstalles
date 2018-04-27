@@ -1,7 +1,7 @@
 class NoEstalles
 
 	def initialize
-		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1]]
+		@tablero = [[1,1,0],[-1,1,1],[-1,-1,1],[-1,-1,1]]
 		@puntajeJugador = 0
 		@vidasJugador = 1
 	end
@@ -35,7 +35,17 @@ class NoEstalles
 	end
 
 	def getTablero
-		return @tablero	
+		@tableroHTML = ""
+		for i in(0..@tablero.length()-1)
+			@tableroHTML+="<tr>"
+			for j in(0..@tablero.length()-1)
+				@tableroHTML+="<td>"
+		 		@tableroHTML+= getCeldaFila(i,j)
+				@tableroHTML+="</td>"
+			end
+			@tableroHTML+="</tr>"
+		end
+		return @tableroHTML
 	end
 
 	def getBombas
@@ -48,6 +58,10 @@ class NoEstalles
 
 	def getCeldasBombaContorno
 		return 9
+	end
+	
+	def getCeldaFila (fila, columna)
+		celda = "<button name='c" + columna.to_s + "' value='" + @tablero[fila] [columna].to_s + "' class='btn_InicioJuego' onClick='validarCelda(this)'></button>"
 	end
 
 end
